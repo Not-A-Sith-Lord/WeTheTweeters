@@ -16,7 +16,7 @@ module.exports =  function saveToFile( newTweets ){
     const filePath = `./tweetResults/tweets-${year}-${month}.txt`; //1 file per month
 
     const textToWrite =
-      'Date: ' + date + '/n' +
+      'Date: ' + date + '\n' +
       'receipt: ' + tweetRecord.receipt.receipt + '\n' +
       'originalContent: ' + stringify(tweetRecord.originalContent) + '\n' + '------------------------------------------------------' + '\n';
 
