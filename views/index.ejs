@@ -1,6 +1,46 @@
-<h1><%= title %></h1>
-<p>Welcome to <%= title %></p>
-
-
-
-<p>Stuff just ran</p>
+<% allTweets.forEach((tweet) => { %>
+<div class="tweet-container">
+  <div class="row">
+    <div id="profile">
+      <div class="left">
+        <img id="profile-pic" src="./images/profile-picture.jpg"/>
+      </div>
+      <div class="right">
+        <div class="profile-info">
+          <div class="top-row">
+          <img src="./images/account-logo.jpg" />
+          <p class="name">Donald J. Trump</p>
+          <img id="validated" src="./images/validated-account.jpg" />
+        </div>
+          <p class="handle">@realDonalTrump</p>
+      </div>
+    </div>
+  </div>
+    <div id="follow-btn">
+      <img id="logo" src="./images/twitter-logo.jpg"/>
+      <p>follow</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="content">
+      <p class="tweet"><%= tweet.text %></p>
+      <p class="time"><%= tweet.created_at %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="controls">
+      <div id="reply">
+        <img src="./images/reply.jpg" />
+      </div>
+      <div class="retweet">
+        <img src="./images/retweet.jpg" />
+        <p><%= tweet.retweet_count %></p>
+      </div>
+      <div class="favorite">
+        <img src="./images/favorite.jpg" />
+        <p><%= tweet.favorite_count %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% }); %>

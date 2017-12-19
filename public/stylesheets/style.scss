@@ -1,11 +1,17 @@
+html, body {
+  margin:0;
+  padding:0;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: rgb(83,189,250);
 
   .trump-gif {
+    max-width:200px;
     position: absolute;
-    top:0;bottom:0;right:0;left:0;
+    top:0; left:0;
     margin:auto;
     z-index:-1;
   }
@@ -13,4 +19,140 @@ body {
 
 a {
   color: #00B7FF;
+}
+
+p {
+  margin:0;
+  font-family:"Helvetica Neue";
+  font-size:20px;
+}
+
+/* ============ layout classes ============ */
+.tweet-container {
+  position:relative;
+  width:500px;
+  margin:50px auto;
+  background-color: rgb(255, 255, 255);
+  border-radius:6px;
+  border:1px solid rgb(225, 232, 237);
+  padding:0px 20px;
+}
+
+.row {
+  height:auto;
+  overflow:hidden;
+  display:block;
+  margin:20px 0;
+}
+
+.left {
+  float:left;
+}
+
+.right {
+  float:right;
+}
+
+/* =============  profile info / section ============  */
+#profile {
+  float:left;
+}
+
+#profile-pic {
+  height:54px;
+  width:auto;
+}
+
+.profile-info {
+  padding-left:15px;
+  margin-top:2px;
+}
+
+.profile-info img {
+  height:20px;
+  width:auto;
+}
+
+.name {
+  display:inline;
+  margin:0 3px;
+  font-weight:bold;
+}
+
+.handle {
+  color:rgb(104, 109, 129);
+}
+
+#validated {
+  position:relative;
+  height:23px;
+  top:3px;
+}
+/* ========  follow button ========== */
+
+#follow-btn {
+  float:right;
+  border:2px solid rgb(85, 172, 238);
+  border-radius:6px;
+  padding:10px;
+  /*margin:30px;*/
+}
+
+#follow-btn p {
+  display:inline;
+  font-weight:bold;
+  color:rgb(85, 172, 238);
+  text-transform: uppercase;
+  padding-left:5px;
+}
+
+#follow-btn img {
+  height:20px;
+  width:auto;
+  position: relative;
+  top:3px;
+}
+
+/* ========== tweet content ============ */
+.content p {
+  line-height:1.5;
+}
+
+.content .time {
+  color:rgb(101, 116, 127);
+}
+
+/* ============  tweet controls =============== */
+.controls > div {
+  display:inline;
+  margin-left:20px;
+}
+
+.controls > div:nth-child(1) {
+  margin-left:0;
+}
+
+.controls div img {
+  height:20px;
+}
+
+.controls p {
+  color:rgb(101, 116, 127);
+  display:inline;
+  margin-left:3px;
+  position: relative;
+  top:-3px;
+}
+
+@media screen and (max-width:531px) {
+
+  #follow-btn {
+    // float:left;
+  }
+
+  .controls > div {
+    // display:block;
+    // /*margin-left:0;*/
+    // margin:5px 0;
+  }
 }

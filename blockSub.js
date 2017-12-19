@@ -7,6 +7,7 @@ const hashClient = new hashclient(access_token, refresh_token);
 
 module.exports = (input) => {
   console.log('Creating new block subscription')
+  console.log(config.root);
   //Payload url info for blockSub. destId is changed by resetBlockSub.
   var root = config.root;
   var destId = Date.now();
@@ -35,4 +36,3 @@ module.exports = (input) => {
         }
     });
 }
-

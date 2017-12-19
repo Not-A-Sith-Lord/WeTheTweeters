@@ -1,4 +1,3 @@
-"use strict";
 const express = require('express');
 const router = express.Router();
 const pendingReceipt = require('../models/pendingReceipt');
@@ -48,7 +47,7 @@ router.post(`/check`, (req,res,next) => {
 
             //Save the new Tweet Record
             newTweetRecord.save((err, newTweet) => {
-              if (err){console.log(err)}
+              if (err){console.log(err);}
               else{
                 console.log("it saved!");
 
@@ -68,9 +67,9 @@ router.post(`/check`, (req,res,next) => {
                   callback();
               });
               }
-            })
+            });
           }
-        })
+        });
       }
 
     function doAfter(err){
