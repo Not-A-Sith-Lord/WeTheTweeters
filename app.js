@@ -16,7 +16,7 @@ app.use(cors());// Enable cors for all domains
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI, {
-  useMongoClient: true,
+  useMongoClient: true
 });
 
 
