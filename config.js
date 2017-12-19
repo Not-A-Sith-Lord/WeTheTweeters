@@ -7,7 +7,6 @@ module.exports = {
       access_token:         '2402760295-PgYsTh9sYsmMT8M1HXOr7YWvU7Dk6KRMobsfTtz',
       access_token_secret:  'x2yzYaxltWAGaN9R3yVudzMMgXYyQQ47SdLzdSuqjDweJ'
     },
-    userId: '' //TEST account (twitter account ID, will be reading tweets from this user)
     userId: '25073877'       //TRUMP account (twitter account ID, will be reading tweets from this user)
   },
 

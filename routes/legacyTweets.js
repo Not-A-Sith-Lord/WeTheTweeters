@@ -1,4 +1,3 @@
-"use strict";
 const express = require('express');
 const router = express.Router();
 const pendingReceipt = require('../models/pendingReceipt');
@@ -15,18 +14,16 @@ const axios = require('axios');
 const sha256 = require('sha256');
 
 router.get('/legacy', (req,res,next) => {
-
-
 //To encode legacy tweet data you have to manually link the source in json.
 //And simply trigger this route
-
-var data = require("../parsedTweets/condensed_2017 6.json");
+var data = require("../parsedTweets/test.json");
+res.locals.allTweets = data;
 
 var count = 0;
   async.eachSeries(data, iteratee, doAfter);
 
   function iteratee(tweet, callback){
-    console.log("===== Iterating Legacy Data ======")
+    console.log("===== Iterating Legacy Data ======");
     count++;
     console.log("NUMBER OF ITERATIONS: " + count);
 
@@ -34,7 +31,7 @@ var count = 0;
     var input = {
       text: tweet.text,
       created_at: tweet.created_at
-    }
+    };
     console.log("Tweet to encode: ");
     console.log(input);
 
@@ -67,8 +64,13 @@ var count = 0;
               console.log(err);
               return next(err);
             } else {
-             console.log("------New Pending Reciept Saved-----")
-             callback();
+              console.log("🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥");
+              console.log(result);
+              console.log("------New Pending Reciept Saved-----");
+              callback();
+              res.render('index.ejs');
+
+
            }
 
            });
